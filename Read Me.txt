@@ -1,0 +1,43 @@
+LB Terminal (Linux-Based Terminal) - Usage Guide
+===============================================
+
+What is the LB Terminal?
+------------------------
+The LB Terminal is a web-based Linux shell running in your Codespace. It provides a full-featured, root-access terminal directly in your browser, accessible from anywhere with the correct port forwarded.
+
+How to Start the LB Terminal
+----------------------------
+1. Open a terminal in your Codespace.
+2. Navigate to the terminal-web directory:
+   cd terminal-web
+3. Start the server (this will also forward the port automatically):
+   npm start
+   # or, to use the wrapper script:
+   npm run start:forward
+4. The server will run as root and listen on port 3000.
+
+How to Access the LB Terminal
+-----------------------------
+- In VS Code, open the "Ports" tab (usually on the left sidebar, plug icon).
+- Find port 3000. Click the link to open the terminal in your browser.
+- You can also use the provided forwarded URL (e.g., https://3000-<hash>.preview.app.github.dev).
+- You NEED to put the port 3000 into the forward port option!
+
+How to Use the LB Terminal
+--------------------------
+- You will see a Linux shell prompt in your browser.
+- Type any Linux command and press Enter (e.g., ls, cd, whoami, apt-get, etc.).
+- You have full root access—be careful!
+- You can run scripts, install packages, and manage files as you would in a normal terminal.
+
+Security Warning
+----------------
+Anyone with access to the forwarded port will have root access to your Codespace. Do not expose this port to untrusted networks.
+
+Troubleshooting
+---------------
+- If the terminal does not load, make sure the server is running and port 3000 is forwarded.
+- If you see permission errors, ensure you started the server with npm start (it will escalate to root automatically).
+- For network or package issues, check your Codespace's internet connectivity.
+
+Enjoy your LB Terminal!

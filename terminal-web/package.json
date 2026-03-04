@@ -1,0 +1,15 @@
+{
+  "name": "linux-terminal-web",
+  "version": "1.0.0",
+  "description": "A simple web interface providing a Linux-like terminal using xterm.js and node-pty",
+  "main": "server.js",
+  "scripts": {
+    "start": "gh codespace ports forward 3000:3000 2>/dev/null || true && node server.js",
+    "start:forward": "bash start.sh"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ws": "^8.13.0",
+    "node-pty": "^0.10.1"
+  }
+}

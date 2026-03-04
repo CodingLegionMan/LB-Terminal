@@ -1,0 +1,8 @@
+{
+  "name": "Terminal Web Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {},
+  "forwardPorts": [3000],
+  "postCreateCommand": "echo 'devcontainer ready'",
+  "remoteUser": "codespace"
+}
